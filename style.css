@@ -1,92 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; 
+    transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
 
-        body {
-            background-color: #edede9;
-            color: #333;
-            text-align: center;
-        }
+}
 
-        header {
-            background: #1e88e5;
-            color: white;
-            padding: 15px 0;
-        }
+body {
+    background-color: #000814;
+    color: #ffffff;
+    text-align: center;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+header {
+    background: #1e88e5;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0px 6px 145px 39px rgba(0,0,0,0.75);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+h1 {
+    font-size: 2.5rem;
+}
 
-        #banner {
-            background: url('banner.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-        }
+     
+/* Navegação */
+nav.navegacao_header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-        .botao {
-            display: inline-block;
-            background: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+nav.navegacao_header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        section {
-            padding: 40px 20px;
-        }
+/* Seção Banner */
+#banner {
+    background: url('Imagens/Evento.jpg ') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    margin: 0;
+}
+#banner > div{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 390px;
+}
+#banner > div > h2{
+    margin-bottom: 10px;
+}
+#banner > div > p{
+    margin-bottom: 20px;
+}
 
-        .palestrante {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-        }
+.botao {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+a.botao:hover {
+    background: #f57c00;
+}
 
-        .palestrante img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
+/* Seções */
+section {
+    padding: 40px 20px;
+    margin-top: 10%;
+}
+/* Estilo para a seção de palestrantes */
+h3.nome_palestrante {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+#palestrantes {
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: auto;
-        }
+#palestrantes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
 
-        input, button {
-            margin: 10px 0;
-            padding: 10px;
-        }
+/* Contêiner que agrupa os cards */
+.container-palestrantes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
 
-        footer {
-            background: #1e88e5;
-            color: white;
-            padding: 10px 0;
-        }
+/* Estilo individual para os cards dos palestrantes */
+.palestrante {
+    width: 280px;            /* Tamanho do card */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .palestrante {
-                display: block;
-            }
-        }
+.palestrante img {
+    width: 100%;
+    height: 390px;           /* Tamanho fixo para a imagem */
+    object-fit: cover;       /* A imagem preenche o espaço sem distorcer */
+    border-bottom: 2px solid #ddd;
+}
+
+.palestrante  h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    position: relative;
+}
+
+.palestrante p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+/* Efeito de hover para os cards */
+.palestrante:hover {
+    transform: translateY(-10px); /* Eleva o card quando passa o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#sobre > :is(p)
+{
+margin-top: 10px;
+}
+
+/* Formulário */
+section.sessao_formulario{
+    background-color: #1565c0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 10PX auto;
+}
+    div.alinhamento_radio > input label{
+        display: flex;
+       align-items: center;
+       gap: 20px;
+       margin-bottom: 10px;
+       text-align: center;
+    }
+   
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+
+button.btn_enviar{
+    border: 1px solid #e9e9e9;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content:
+     center;
+    gap: 8px; /* Espaço entre o texto e o ícone */
+
+     align-items: center;
+}
+button.btn_enviar i {
+    font-size: 1.0rem;
+    color: #ffffff;
+ 
+}
+button.btn_enviar {
+    background-color: #ff9800;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.campo input {
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+i{
+    color: #666;
+}
+.campo i {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 18px;
+}
+.campo {
+    position: relative;
+    width: 100%;
+}
+/* Rodapé */
+footer {
+    background: #1e88e5;
+    color: white;
+    padding: 10px 0;
+    margin-top: 10%;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .palestrante {
+        display: block;
+    }
+}
