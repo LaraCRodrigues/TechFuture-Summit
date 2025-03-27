@@ -107,7 +107,7 @@ h3.nome_palestrante {
 
 /* Estilo individual para os cards dos palestrantes */
 .palestrante {
-    width: 280px;            /* Tamanho do card */
+    width: 280px;            
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -116,8 +116,8 @@ h3.nome_palestrante {
 
 .palestrante img {
     width: 100%;
-    height: 390px;           /* Tamanho fixo para a imagem */
-    object-fit: cover;       /* A imagem preenche o espaço sem distorcer */
+    height: 390px;          
+    object-fit: cover;       
     border-bottom: 2px solid #ddd;
 }
 
@@ -178,7 +178,7 @@ button.btn_enviar{
     display: flex;
     justify-content:
      center;
-    gap: 8px; /* Espaço entre o texto e o ícone */
+    gap: 8px; 
 
      align-items: center;
 }

@@ -20,6 +20,20 @@ function enviarDados() {
         return;
     }
 
+    // Filtragem: Validar nome (somente letras e espaços)
+    const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;
+    if (!nomeRegex.test(nome)) {
+        alert("Nome inválido! Utilize apenas letras e espaços.");
+        return;
+    }
+
+    // Filtragem: Validar e-mail (formato válido)
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        alert("E-mail inválido! Verifique o formato.");
+        return;
+    }
+
     // Criar um objeto com os dados
     let dados = {
         nome: nome,
