@@ -5,8 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth; 
-    transition: all 0.3s ease;
+        scroll-behavior: smooth; 
+        transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
 
 }
@@ -199,10 +199,14 @@ button.btn_enviar {
 
 
 .campo input {
-    padding: 10px 40px;
+    padding: 10px 10px 10px 40px; /* espaço para o ícone */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    width: 70%;
+    box-sizing: border-box;
+
+
 }
 i{
     color: #666;
@@ -214,9 +218,10 @@ i{
     transform: translateY(-50%);
     color: #666;
     font-size: 18px;
-}
-.campo {
+  }
+  .campo {
     position: relative;
+    min-width: 250px;
     width: 100%;
 }
 /* Rodapé */
@@ -236,5 +241,8 @@ footer {
 
     .palestrante {
         display: block;
+    }
+    .campo i {
+        left: 3.5em;
     }
 }
